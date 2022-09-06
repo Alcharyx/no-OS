@@ -200,6 +200,8 @@ int32_t stm32_spi_init(struct no_os_spi_desc **desc,
 		goto error;
 
 	/* copy settings to device descriptor */
+	spi_desc->parent = param->parent;
+
 	spi_desc->device_id = param->device_id;
 	spi_desc->max_speed_hz = param->max_speed_hz;
 	spi_desc->mode = param->mode;

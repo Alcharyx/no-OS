@@ -54,8 +54,10 @@ int32_t no_os_spi_init(struct no_os_spi_desc **desc,
 	if (!param)
 		return -1;
 
+
 	if ((param->platform_ops->init(desc, param)))
 		return -1;
+
 
 	(*desc)->platform_ops = param->platform_ops;
 
